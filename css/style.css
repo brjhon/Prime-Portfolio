@@ -306,7 +306,7 @@ span{
 
 /* ----------- Education section design----------*/
 
-.Education{
+.education{
     display: flex;
     margin-top: 5rem;
     align-items: center;
@@ -314,20 +314,45 @@ span{
     flex-direction: column;
     min-height: auto;
     padding-bottom: 4rem;
+    
  
 }
 
- .education-row{
+.education .education-row{
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 5rem;
     align-items: center;                 
-    padding: 0 10%;
+    padding: 0 15%;
     margin-top: 5rem;
-    margin-bottom: 10rem;                      
+    margin-bottom: 15rem;                      
     background: url('/imagens/Papel.jpg') no-repeat ;
     background-size: cover;                 
     background-position: center;            
     border-radius: 5rem 5rem 5rem 5rem;   
     /* box-shadow:black 5rem 0rem 5rem 5rem;*/
+
+}
+
+.education-row .education-column{
+    flex: 1 1 40rem;
+}
+
+.education-column .title{
+    font-size: 2.5rem;
+    margin:  0 0 1.5rem 2rem;
+}
+
+
+.education-column .education-box{
+    border-left: .2rem solid var(--main-color) ;
+}
+
+.education-box .education-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-content .content{
+    position: relative;
 }
