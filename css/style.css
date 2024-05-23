@@ -314,8 +314,6 @@ span{
     flex-direction: column;
     min-height: auto;
     padding-bottom: 4rem;
-    
- 
 }
 
 .education .education-row{
@@ -331,7 +329,6 @@ span{
     background-position: center;            
     border-radius: 5rem 5rem 5rem 5rem;   
     /* box-shadow:black 5rem 0rem 5rem 5rem;*/
-
 }
 
 .education-row .education-column{
