@@ -69,25 +69,54 @@ section{
     padding: 10rem 9% 2rem;                 /* define o preenchimento (espaço externo) de um elemento com relações as suas bordas */
 }
 
+                        /* ========================
+                        Home: imagem + conteúdo
+                        ======================== */
+
 .home{
     display: flex;
     align-items: center;                    /* e usada em contêineres flexíveis (display:flex) para alinhar s itens   */
     padding: 0 9%;                          /* define o preenchimento (espaço externo) de um elemento com relações as suas bordas */
-    background: url('/imagens/Fundo.jpg') no-repeat;
+    background: url('/imagens/Fundo\ papeldeparede.png') no-repeat;
     background-size: cover;                 /* e usada para redefinir um plano de fundo de um elemento */
-    background-position: center;            /* centraliza a imagem pro centro */
-    border-radius: 10rem 0px 0rem 10rem;   /* o primeiro rem, e o direito superior, o terseiro, e o inferior esquerdo, o quarto, e o inferior direito */
+    background-position: center;          /* centraliza a imagem pro centro */
+    overflow: hidden;
+    position: relative;                     /* para .home-sci e overlays */
+    min-height: 100vh;
+    border-radius: 0rem 0px 10rem 0rem;   /* o primeiro rem, e o direito superior, o terseiro, e o inferior esquerdo, o quarto, e o inferior direito */
     box-shadow:black 5rem 0rem 5rem 5rem;
 }
 
 .home-content{
-    max-width: 60rem;
+    max-width: 50rem;
+    flex: 1;
+    animation: slideInRight 0.8s ease-out both;
 }
 
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+}
+
+/* Container da imagem */
+.home-image {
+  flex: 0 0 40%;
+  height: 90%;
+  width: 70%;
+  margin-right: 2rem;
+  border-radius: 10%;
+  animation: slideInLeft 0.8s ease-out both;
+}
+.home-image img {
+  width: 90%;
+  height: 70%;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.home-content h1 span {
+  color: var(--main-color);
 }
 
 .home-content .text-animate{
@@ -107,13 +136,75 @@ section{
     margin: 2rem 0 4rem;
 }
 
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+   /*  border: 2px solid transparent; 
+    transition: 3s; */ 
+    /* edit */
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 8rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem   solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ;
+}
+
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+
 .btn-box{
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
+    margin-top: 9rem;
 }
+
+
 
 .btn-box .btn{
     position: relative;
@@ -167,61 +258,18 @@ section{
     width: 100%;
 }
 
-.home-sci{
-    position: absolute;
-    bottom: 4rem;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
+
+
+/* animações de entrada */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-.home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem   solid var(--main-color);
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--main-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s ;
-}
-
-.home-sci a:hover{
-    color: var(--bg-color);
-}
-
-.home-sci a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.home-sci a:hover::before{
-    width: 100%;
-}
-
-.home-imgHover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-   /*  border: 2px solid transparent; 
-    transition: 3s; */ /* edit */
-}
 
 /* --------------------------about section design------------------------- */ 
 .About{
@@ -352,4 +400,21 @@ span{
 
 .education-content .content{
     position: relative;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .home-image {
+    margin: 2rem 0;
+    max-width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .home-image { max-width: 150px; }
+  .home-content h1 { font-size: 4rem; }
+  .home-content .text-animate h3 { font-size: 2.4rem; }
 }
