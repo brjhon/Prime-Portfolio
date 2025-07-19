@@ -105,13 +105,14 @@ section{
   height: 90%;
   width: 70%;
   margin-right: 2rem;
-  border-radius: 10%;
+  /* o primeiro rem, e o direito superior, o terseiro, e o inferior esquerdo, o quarto, e o inferior direito */
   animation: slideInLeft 0.8s ease-out both;
 }
 .home-image img {
   width: 90%;
   height: 70%;
   display: block;
+   border-radius: 50px 20px 50px 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
