@@ -41,110 +41,87 @@
   </div>
 </section>
 
-    <!-- abaut section design -->
-    <section class="About" id="About">
-        <h2 class="heading">About <span>Me</span></h2>
+<section id="projects" class="projects">
+  <h2>Meus Projetos</h2>
 
-        <div class="about-img">
-            <img src="imagens/game.jpg" alt="">
-            <span class="cicle-spin"></span>
+  <!-- filtros de categoria -->
+  <div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+    <button class="filter-btn" data-filter="js">JavaScript</button>
+  </div>
+
+  <!-- grid de cards -->
+  <div class="projects-grid">
+    <!-- exemplo de card -->
+    <div class="project-card" data-category="html-css">
+      <img src="imagens/projeto1.jpg" alt="Screenshot Projeto 1">
+      <div class="project-info">
+        <h3>Projeto 1</h3>
+        <p>Landing page responsiva com grid e animações leves.</p>
+        <div class="project-links">
+          <a href="https://seu-site.com/projeto1" target="_blank" class="btn">Ver Site</a>
+          <a href="https://github.com/seu-usuario/projeto1" target="_blank" class="btn">Código</a>
         </div>
+      </div>
+    </div>
 
-<!-----------about section design----------->
+    <!-- repita para cada projeto, trocando data-category e conteúdo -->
+    <div class="project-card" data-category="js">
+      <img src="imagens/projeto2.jpg" alt="Screenshot Projeto 2">
+                <div class="project-info">
+                    <h3>Projeto 2</h3>
+                    <p>App JS puro com consumo de API e DOM Dinâmico.</p>
+                    
+                    <div class="project-links">
+                        <a href="#" class="btn">Ver Site</a>
+                        <a href="#" class="btn">Código</a>
+                    </div>
 
-        <div class="about-content">
-            <h3> Frontend Developer!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                     Dicta numquam assumenda delectus eveniet obcaecati ratione eius provident inventore quidem voluptas, culpa voluptates quo ab!
-                     Enim corporis et in aliquid, repellendus a quasi.
-                     Nostrum, voluptates eius.</p>
-
-            <div class="btn-box btns">
-                <a href="#" class="btn"> Read More</a>
+                </div>
             </div>
         </div>
     </section>
 
-<!----------- education section design----------->
+  <!-- ======== Seção de Contato ======== -->
+<section id="contact" class="contact">
+  <div class="contact-container">
+    <h2>Vamos conversar?</h2>
+    <form action="#" method="post" novalidate>
+      <div class="input-group">
+        <input type="text" name="name" id="name" required>
+        <label for="name">Seu nome</label>
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" id="email" required>
+        <label for="email">Seu e-mail</label>
+      </div>
+      <div class="input-group">
+        <textarea name="message" id="message" rows="5" required></textarea>
+        <label for="message">Sua mensagem</label>
+      </div>
+      <button type="submit" class="btn">Enviar Mensagem</button>
+    </form>
+  </div>
+</section>
 
-   <section class="education" id="education">
-    <h2 class="heading">My <span>Journey</span></h2>
-
-    <div class="education-row">
-        
-        <div class="education-column">
-            <h3 class="title"> Education</h3>
-            <div class="education-box">
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Master Degree - Courses</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-                    
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Master Degree - Courses</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-                    
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Master Degree - Courses</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="education-column">
-            <h3 class="title"> Experience</h3>
-
-            <div class="education-box">
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-                    
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year">
-                            <i class='bx bxs-calendar'></i> 2021 - 2024</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Blanditiis itaque ipsum repellat odio deserunt minus velit excepturi, dolore quidem quas magni.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="#"><i class='bx bxl-github'></i></a>
     </div>
-   </section>
+    <p>&copy; 2025 Jhon Wesley. Todos os direitos reservados.</p>
+    <div id="themeSwitch" class="theme-switch">
+      <i class='bx bx-sun'></i>
+    </div>
+  </footer>
+   
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/projects.js"></script>
 
-    <script src="js/script.js">More</script>
 </body>
 </html>

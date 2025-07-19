@@ -15,6 +15,15 @@
     --main-color:#f5f108; /* #1c31a5 */
 }
 
+/* Dark mode */
+body.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --section-bg: #1e1e1e;
+  --footer-bg: #000000;
+  --footer-text: #aaaaaa;
+}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -24,46 +33,6 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo{
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.navbar a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
-}
-
-.navbar a:hover,
-.navbar a.active{
-    color: var(--main-color);
-}
-
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
-}
-
 section{
     min-height: 100vh;                      /* e usada para redefinir a altura mínima de um elemento com relação à altura da janela do navgador */
     padding: 10rem 9% 2rem;                 /* define o preenchimento (espaço externo) de um elemento com relações as suas bordas */
@@ -195,7 +164,6 @@ section{
     width: 100%;
 }
 
-
 .btn-box{
     position: relative;
     display: flex;
@@ -204,8 +172,6 @@ section{
     height: 5rem;
     margin-top: 9rem;
 }
-
-
 
 .btn-box .btn{
     position: relative;
@@ -259,6 +225,238 @@ section{
     width: 100%;
 }
 
+/* === Seção de Contato === */
+
+/* Seção inteira com gradiente */
+.contact {
+  background: var(--second-bg-color);
+  padding: 6rem 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card interno com fundo claro (mesma cor de seção neutra) */
+.contact-container {
+  background: var(--section-bg-color); /* ex: branco ou um off-white que você tenha */
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Título com underline animado */
+.contact-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.contact-container h2::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -0.5rem;
+  height: 4px; width: 4rem;
+  background: var(--main-color);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.contact-container h2:hover::after {
+  transform: scaleX(1);
+}
+
+/* Formulário em grid para espaçamento consistente */
+.contact-container form {
+  display: grid;
+  gap: 1.8rem;
+}
+
+/* Input groups para labels flutuantes */
+.input-group {
+  position: relative;
+}
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1.2rem 1rem 0.4rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+.input-group label {
+  position: absolute;
+  left: 1rem; top: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+/* Efeito: label “sobe” quando o campo estiver em foco ou preenchido */
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group input:not(:placeholder-shown),
+.input-group textarea:not(:placeholder-shown) {
+  border-bottom-color: var(--main-color);
+}
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.6rem);
+  font-size: 0.85rem;
+  color: var(--main-color);
+}
+
+/* Botão sólido na cor principal */
+.contact-container .btn {
+  background: var(--main-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: .6rem;
+  transition: filter .2s, transform .2s;
+}
+
+.contact-container .btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+/* === Footer === */
+.footer {
+  position: relative;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 3rem 9%;
+  overflow: hidden;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-social a {
+  font-size: 2rem;
+  color: inherit;
+  transition: color .3s;
+}
+.footer-social a:hover {
+  color: var(--main-color);
+}
+.footer p {
+  font-size: .9rem;
+}
+
+/* === Theme Switch === */
+.theme-switch {
+  position: absolute;
+  top: 2rem;
+  right: 9%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: inherit;
+}
+
+/* === Seção Projetos === */
+.projects {
+  padding: 6rem 9%;
+  background: var(--bg);      /* use o fundo principal */
+  text-align: center;
+}
+.projects h2 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Filtros */
+.projects-filter {
+  display: inline-flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.filter-btn {
+  padding: .6rem 1.2rem;
+  border: 2px solid var(--main-color);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: .6rem;
+  transition: background .3s, color .3s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/* Grid de cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 6.5rem;
+}
+
+/* Card básico */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform .5s;
+}
+/* zoom suave na imagem */
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay de info */
+.project-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity .4s, transform .4s;
+}
+.project-card:hover .project-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.project-info p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+.project-links .btn {
+  padding: .8rem 1.4rem;
+  font-size: .9rem;
+}
 
 
 /* animações de entrada */
@@ -269,138 +467,6 @@ section{
 @keyframes slideInRight {
   from { opacity: 0; transform: translateX(50px); }
   to   { opacity: 1; transform: translateX(0); }
-}
-
-
-/* --------------------------about section design------------------------- */ 
-.About{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10rem; /* edit */
-    gap: 2rem;
-    background: transparent ;/* var(--second-bg-color)
-    padding-top: 5rem; /* edit */
-    padding-bottom: 6rem; /* edit */
-    border-radius:  0rem 0px 5rem 5rem;   /* o primeiro rem, e o direito superior, o terseiro, e o inferior esquerdo, o quarto, e o inferior direito */
-    /* box-shadow:black 5rem 0rem 5rem 5rem;  /* edit */ 
-}
-
-.heading{
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    
-}
-
-span{
-    color: var(--main-color);
-}
-
-.about-img{
-    position: relative;
-    width: 55rem;
-    height: 35rem;
-    border-radius: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*border-radius: 10rem 0px 0rem 10rem;*/   /* o primeiro rem, e o direito superior, o terseiro, e o inferior esquerdo, o quarto, e o inferior direito */
-    /* box-shadow:black 5rem 0rem 5rem 5rem; */
-}
-
-.about-img img{
-    width: 100%;
-    border-radius: 5%;
-    border: 0.3rem solid var(--main-color);
-}
-
-/* .about-img .cicle-spin{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    border-top: .2rem solid red;
-    border-bottom: .2rem solid red;
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-} */
-
-.about-content{
-    text-align: center;
-}
-
-.about-content h3{
-    font-size: 2.6rem;
-}
-
-.about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
-.btn-box.btns{
-    display: inline-block;
-    width: 15rem;
-}
-
-.btn-box.btns a::before{
-    background: var(--second-bg-color);
-}
-
-
-/* ----------- Education section design----------*/
-
-.education{
-    display: flex;
-    margin-top: 5rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: auto;
-    padding-bottom: 4rem;
-}
-
-.education .education-row{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    align-items: center;                 
-    padding: 0 15%;
-    margin-top: 5rem;
-    margin-bottom: 15rem;                      
-    background: url('/imagens/Papel.jpg') no-repeat ;
-    background-size: cover;                 
-    background-position: center;            
-    border-radius: 5rem 5rem 5rem 5rem;   
-    /* box-shadow:black 5rem 0rem 5rem 5rem;*/
-}
-
-.education-row .education-column{
-    flex: 1 1 40rem;
-}
-
-.education-column .title{
-    font-size: 2.5rem;
-    margin:  0 0 1.5rem 2rem;
-}
-
-
-.education-column .education-box{
-    border-left: .2rem solid var(--main-color) ;
-}
-
-.education-box .education-content{
-    position: relative;
-    padding-left: 2rem;
-}
-
-.education-content .content{
-    position: relative;
 }
 
 /* Responsividade */
@@ -418,4 +484,22 @@ span{
   .home-image { max-width: 150px; }
   .home-content h1 { font-size: 4rem; }
   .home-content .text-animate h3 { font-size: 2.4rem; }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .contact {
+    padding: 4rem 5%;
+  }
+  .contact-container {
+    padding: 2rem;
+  }
+  .contact-container h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Responsividade mantém o grid automático */
+@media (max-width: 600px) {
+  .projects-filter { flex-wrap: wrap; justify-content: center; }
 }
