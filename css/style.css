@@ -77,7 +77,7 @@ section{
     display: flex;
     align-items: center;                    /* e usada em contêineres flexíveis (display:flex) para alinhar s itens   */
     padding: 0 9%;                          /* define o preenchimento (espaço externo) de um elemento com relações as suas bordas */
-    background: url('/imagens/Fundo-papeldeparede.png') no-repeat;
+     background: url('../imagens/Fundo-papeldeparede.png') no-repeat center/cover;
     background-size: cover;                 /* e usada para redefinir um plano de fundo de um elemento */
     background-position: center;          /* centraliza a imagem pro centro */
     overflow: hidden;
