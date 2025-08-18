@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
 
-    <!-- home section design -->
-    <section id="home" class="home">
-  <!-- Container da imagem -->
-  <div class="home-image">
-    <img src="imagens/eu-removebg-preview.png" alt="Foto de perfil de Jhon Wesley">
-  </div>
-
-  <!-- Container do conteúdo textual -->
-  <div class="home-content">
-    <h1>Hi, I'm, <span>Jhon Wesley</span></h1>
-    <div class="text-animate">
-      <h3>Frontend Developer</h3>
+  <!-- home section design -->
+  <section id="home" class="home">
+    <!-- Container da imagem -->
+    <div class="home-image">
+      <img src="imagens/eu-removebg-preview.png" alt="Foto de perfil de Jhon Wesley">
     </div>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, saepe!
-      Illum, pariatur ipsa. Eos est quia esse accusamus ipsam aperiam voluptatibus.
-    </p>
-    <div class="btn-box">
-      <a href="#" class="btn">Hire Me</a>
-      <a href="#" class="btn">Let's Talk</a>
+
+    <!-- Container do conteúdo textual -->
+    <div class="home-content">
+      <h1>Hi, I'm, <span>Jhon Wesley</span></h1>
+      <div class="text-animate">
+        <h3>Frontend Developer</h3>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, saepe!
+        Illum, pariatur ipsa. Eos est quia esse accusamus ipsam aperiam voluptatibus.
+      </p>
+      <div class="btn-box">
+        <a href="#" class="btn">Hire Me</a>
+        <a href="#" class="btn">Let's Talk</a>
+      </div>
+      <div class="home-sci">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
     </div>
-    <div class="home-sci">
-      <a href="#"><i class='bx bxl-facebook'></i></a>
-      <a href="#"><i class='bx bxl-twitter'></i></a>
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Meus Projetos</h2>
+
+    <!-- filtros de categoria -->
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+      <button class="filter-btn" data-filter="js">JavaScript</button>
     </div>
-  </div>
-</section>
 
-<section id="projects" class="projects">
-  <h2>Meus Projetos</h2>
+    <!-- grid de cards -->
+    <div class="projects-grid">
+      <!-- exemplo de card -->
+      <div class="project-card" data-category="html-css">
+        <img src="imagens/projeto1.jpg" alt="Screenshot Projeto 1">
+        <div class="project-info">
+          <h3>Projeto 1</h3>
+          <p>Landing page responsiva com grid e animações leves.</p>
+          <div class="project-links">
+            <a href="https://github.com/seu-usuario/projeto1" target="_blank" class="btn">Ver Site</a>
+            <a href="" target="_blank" class="btn">Código</a>
+          </div>
+        </div>
+      </div>
 
-  <!-- filtros de categoria -->
-  <div class="projects-filter">
-    <button class="filter-btn active" data-filter="all">Todos</button>
-    <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-    <button class="filter-btn" data-filter="js">JavaScript</button>
-  </div>
+      <!-- repita para cada projeto, trocando data-category e conteúdo -->
+      <div class="project-card" data-category="js">
+        <img src="imagens/COWEB.png" alt="Screenshot Projeto 2">
+        <div class="project-info">
+          <h3>Projeto 2</h3>
+          <p>App JS puro com consumo de API e DOM Dinâmico.</p>
 
-  <!-- grid de cards -->
-  <div class="projects-grid">
-    <!-- exemplo de card -->
-    <div class="project-card" data-category="html-css">
-      <img src="imagens/projeto1.jpg" alt="Screenshot Projeto 1">
-      <div class="project-info">
-        <h3>Projeto 1</h3>
-        <p>Landing page responsiva com grid e animações leves.</p>
-        <div class="project-links">
-          <a href="https://github.com/seu-usuario/projeto1" target="_blank" class="btn">Ver Site</a>
-          <a href="" target="_blank" class="btn">Código</a>
+          <div class="project-links">
+            <a href="#" class="btn">Ver Site</a>
+            <a href="#" class="btn">Código</a>
+          </div>
+
         </div>
       </div>
     </div>
-
-    <!-- repita para cada projeto, trocando data-category e conteúdo -->
-    <div class="project-card" data-category="js">
-      <img src="imagens/COWEB.png" alt="Screenshot Projeto 2">
-                <div class="project-info">
-                    <h3>Projeto 2</h3>
-                    <p>App JS puro com consumo de API e DOM Dinâmico.</p>
-                    
-                    <div class="project-links">
-                        <a href="#" class="btn">Ver Site</a>
-                        <a href="#" class="btn">Código</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
+  </section>
 
   <!-- ======== Seção de Contato ======== -->
-<section id="contact" class="contact">
-  <div class="contact-container">
-    <h2>Vamos conversar?</h2>
-    <form action="#" method="post" novalidate>
-      <div class="input-group">
-        <input type="text" name="name" id="name" required>
-        <label for="name">Seu nome</label>
-      </div>
-      <div class="input-group">
-        <input type="email" name="email" id="email" required>
-        <label for="email">Seu e-mail</label>
-      </div>
-      <div class="input-group">
-        <textarea name="message" id="message" rows="5" required></textarea>
-        <label for="message">Sua mensagem</label>
-      </div>
-      <button type="submit" class="btn">Enviar Mensagem</button>
-    </form>
-  </div>
-</section>
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Vamos conversar?</h2>
+      <form action="#" method="post" novalidate>
+        <div class="input-group">
+          <input type="text" name="name" id="name" required>
+          <label for="name">Seu nome</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" id="email" required>
+          <label for="email">Seu e-mail</label>
+        </div>
+        <div class="input-group">
+          <textarea name="message" id="message" rows="5" required></textarea>
+          <label for="message">Sua mensagem</label>
+        </div>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
 
   <!-- ======== Footer ======== -->
   <footer class="footer">
@@ -118,10 +120,11 @@
       <i class='bx bx-sun'></i>
     </div>
   </footer>
-   
-    <script src="js/script.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/projects.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/projects.js"></script>
 
 </body>
+
 </html>
