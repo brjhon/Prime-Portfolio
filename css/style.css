@@ -8,20 +8,34 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* ====== THEME BASE ====== */
 :root{
-    --bg-color:#030231;
-    --second-bg-color:#010f29;
-    --text-color:#f7f7f7;
-    --main-color:#f5f108; /* #1c31a5 */
-}
+  --bg-color:#030231;
+  --second-bg-color:#010f29;
+  --text-color:#f7f7f7;
+  --muted-text:#cfcfe6;
+  --main-color:#f5f108;
 
-/* Dark mode */
-body.dark {
-  --bg: #121212;
-  --text: #e0e0e0;
-  --section-bg: #1e1e1e;
+  --bg: var(--bg-color);
+  --text: var(--text-color);
+  --section-bg: #0b1533;
+  --section-bg-color: #0b1533;
   --footer-bg: #000000;
   --footer-text: #aaaaaa;
+}
+
+body.dark {
+  --bg-color:#0d0d16;
+  --second-bg-color:#0a0a12;
+  --text-color:#e0e0e0;
+  --muted-text:#bdbdd4;
+  --main-color:#f5f108;
+
+  --bg: var(--bg-color);
+  --text: var(--text-color);
+  --section-bg:#141426;
+  --footer-bg:#000000;
+  --footer-text:#aaaaaa;
 }
 
 html{
@@ -32,6 +46,7 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    
 }
 section{
     min-height: 100vh;                      /* e usada para redefinir a altura mínima de um elemento com relação à altura da janela do navgador */
@@ -225,7 +240,127 @@ section{
     width: 100%;
 }
 
-/* === Seção de Contato === */
+.container{ 
+  width: min(1120px,92%); 
+  margin-inline:auto; 
+}
+
+/* === SOBRE === */
+.about {
+  padding: 6rem 9%;
+  background: var(--second-bg-color);
+}
+.about .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+.about p {
+  color: #cfcfe6;
+  line-height: 1.8;
+}
+.about .facts {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(140px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.fact {
+  background: var(--section-bg);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+.fact .num {
+  font-size: 2.2rem;
+  color: var(--main-color);
+  font-weight: 800;
+}
+.fact .label {
+  font-size: 1.2rem;
+  color: #cfcfe6;
+}
+.about-img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* === SKILLS === */
+.skills {
+  padding: 6rem 9%;
+  background: var(--bg-color);
+}
+.skills h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.skill-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.skill {
+  background: var(--section-bg);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+}
+.skill h3 {
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
+}
+.bar {
+  height: 10px;
+  background: rgba(255,255,255,.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar > span {
+  display: block;
+  height: 100%;
+  background: var(--main-color);
+  width: 0;
+  transition: width .8s ease;
+}
+
+/* === EXPERIÊNCIA === */
+.timeline {
+  padding: 6rem 9%;
+  background: var(--second-bg-color);
+}
+.timeline h2 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.line {
+  position: relative;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.item {
+  background: var(--section-bg);
+  margin: 1.2rem 0;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+}
+.item .when {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.item h3 {
+  margin:.2rem 0 .4rem;
+}
 
 /* Seção inteira com gradiente */
 .contact {

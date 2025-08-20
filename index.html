@@ -43,83 +43,185 @@
     </div>
   </section>
 
-  <section id="projects" class="projects">
-    <h2>Meus Projetos</h2>
+  <!-- SOBRE -->
+<section id="about" class="about">
+  <div class="wrap container">
+    <div>
+      <h2>Sobre mim</h2>
+      <p>
+        Sou <strong>Jhon Wesley</strong>, apaixonado por criar interfaces limpas e
+        experiências fluidas no Frontend. Trabalho com HTML, CSS e JavaScript,
+        sempre buscando boas práticas, acessibilidade e performance.
+      </p>
+      <div class="facts">
+        <div class="fact"><div class="num">+10</div><div class="label">Projetos</div></div>
+        <div class="fact"><div class="num">+2</div><div class="label">Anos de estudo</div></div>
+        <div class="fact"><div class="num">100%</div><div class="label">Responsivo</div></div>
+        <div class="fact"><div class="num">∞</div><div class="label">Vontade de aprender</div></div>
+      </div>
+    </div>
+    <div>
+      <img src="imagens/COWEB.png" alt="Banner sobre Jhon" class="about-img">
+    </div>
+  </div>
+</section>
 
-    <!-- filtros de categoria -->
-    <div class="projects-filter">
-      <button class="filter-btn active" data-filter="all">Todos</button>
-      <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-      <button class="filter-btn" data-filter="js">JavaScript</button>
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <div class="container">
+    <h2>Habilidades</h2>
+    <div class="skill-grid">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="bar"><span style="width: 90%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="bar"><span style="width: 85%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="bar"><span style="width: 75%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>UI/UX</h3>
+        <div class="bar"><span style="width: 70%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experience" class="timeline">
+  <div class="container">
+    <h2>Experiência</h2>
+    <div class="line">
+      <div class="item">
+        <div class="when">2025 — Atual</div>
+        <h3>Projetos Frontend (Autônomo)</h3>
+        <p>Landing pages, UI responsiva, animações leves e integrações simples com APIs.</p>
+      </div>
+      <div class="item">
+        <div class="when">2024 — 2025</div>
+        <h3>ColdGend (Projeto pessoal)</h3>
+        <p>Painel de verificação de sites, login automático e screenshots. Migração para SQL.js local.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Meus Projetos</h2>
+    <div class="projects-filter" role="tablist" aria-label="Filtros de projetos">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+      <button class="filter-btn" data-filter="html-css" role="tab" aria-selected="false">HTML/CSS</button>
+      <button class="filter-btn" data-filter="js" role="tab" aria-selected="false">JavaScript</button>
     </div>
 
-    <!-- grid de cards -->
     <div class="projects-grid">
-      <!-- exemplo de card -->
       <div class="project-card" data-category="html-css">
         <img src="imagens/projeto1.jpg" alt="Screenshot Projeto 1">
         <div class="project-info">
           <h3>Projeto 1</h3>
           <p>Landing page responsiva com grid e animações leves.</p>
           <div class="project-links">
-            <a href="https://github.com/seu-usuario/projeto1" target="_blank" class="btn">Ver Site</a>
-            <a href="" target="_blank" class="btn">Código</a>
+            <a href="#" class="btn">Ver Site</a>
+            <a href="#" class="btn">Código</a>
           </div>
         </div>
       </div>
 
-      <!-- repita para cada projeto, trocando data-category e conteúdo -->
       <div class="project-card" data-category="js">
         <img src="imagens/COWEB.png" alt="Screenshot Projeto 2">
         <div class="project-info">
           <h3>Projeto 2</h3>
-          <p>App JS puro com consumo de API e DOM Dinâmico.</p>
-
+          <p>App JS puro com consumo de API e DOM dinâmico.</p>
           <div class="project-links">
             <a href="#" class="btn">Ver Site</a>
             <a href="#" class="btn">Código</a>
           </div>
-
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ======== Seção de Contato ======== -->
-  <section id="contact" class="contact">
+<!-- CONTATO -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contato</h2>
     <div class="contact-container">
-      <h2>Vamos conversar?</h2>
-      <form action="#" method="post" novalidate>
+      <form novalidate>
         <div class="input-group">
-          <input type="text" name="name" id="name" required>
+          <input type="text" id="name" placeholder=" " required>
           <label for="name">Seu nome</label>
         </div>
         <div class="input-group">
-          <input type="email" name="email" id="email" required>
-          <label for="email">Seu e-mail</label>
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Seu email</label>
         </div>
         <div class="input-group">
-          <textarea name="message" id="message" rows="5" required></textarea>
+          <textarea id="message" rows="4" placeholder=" " required></textarea>
           <label for="message">Sua mensagem</label>
         </div>
-        <button type="submit" class="btn">Enviar Mensagem</button>
+        <button type="submit" class="btn">Enviar</button>
       </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ======== Footer ======== -->
+
   <footer class="footer">
-    <div class="footer-social">
-      <a href="#"><i class='bx bxl-facebook'></i></a>
-      <a href="#"><i class='bx bxl-twitter'></i></a>
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
-      <a href="#"><i class='bx bxl-github'></i></a>
-    </div>
-    <p>&copy; 2025 Jhon Wesley. Todos os direitos reservados.</p>
-    <div id="themeSwitch" class="theme-switch">
-      <i class='bx bx-sun'></i>
+    <div class="container">
+      <p>© 2025 Jhon Wesley. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- JS embutido (pode separar depois em /js) -->
+<script>
+// Filtro de projetos
+(function(){
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    const filter = b.dataset.filter;
+    cards.forEach(c => { c.style.display = (filter==='all'||c.dataset.category===filter)?'':'none'; });
+  }));
+})();
+
+// Theme switch opcional (se tiver um botão com id="themeSwitch")
+(function(){
+  const key='jw-theme'; const saved=localStorage.getItem(key);
+  if(saved==='dark'){ document.body.classList.add('dark'); }
+  const sw=document.getElementById('themeSwitch');
+  if(sw){ sw.addEventListener('click',()=>{
+    document.body.classList.toggle('dark');
+    localStorage.setItem(key, document.body.classList.contains('dark') ? 'dark' : 'light');
+  });}
+})();
+
+// Validação simples do contato (efeito de borda)
+(function(){
+  const form=document.querySelector('.contact form'); if(!form) return;
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const n=form.querySelector('#name');
+    const m=form.querySelector('#message');
+    const em=form.querySelector('#email');
+    [n,em,m].forEach(i=>i.classList.remove('input-error','input-success'));
+    let ok=true;
+    if(!n.value.trim()){n.classList.add('input-error'); ok=false;}
+    if(!/^\S+@\S+\.\S+$/.test(em.value)){em.classList.add('input-error'); ok=false;}
+    if(m.value.trim().length<8){m.classList.add('input-error'); ok=false;}
+    if(ok){ [n,em,m].forEach(i=>i.classList.add('input-success')); alert('Mensagem enviada! (demo)'); form.reset(); }
+  });
+})();
+</script>
+
 
   <script src="js/script.js"></script>
   <script src="js/theme.js"></script>
