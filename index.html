@@ -44,7 +44,7 @@
   </section>
 
   <!-- SOBRE -->
-  <section id="about" class="about">
+  <section id="about" class="about" data-accent="teal">
     <div class="wrap container">
       <!-- Coluna de texto -->
       <div class="about-text">
@@ -91,7 +91,7 @@
 
         <div class="about-actions">
           <a href="#" class="btn-primary">Baixar CV</a>
-          <a href="#contact" class="btn-ghost">Falar comigo</a>
+          <a href="#" class="btn-ghost" data-contact-open>Fale comigo</a>
         </div>
       </div>
 
@@ -116,7 +116,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="skills">
+  <section id="skills" class="skills" data-accent="violet" >
     <div class="wrap container">
       <!-- Coluna 1: Hard Skills com barras -->
       <div class="skills-col">
@@ -211,66 +211,245 @@
     </div>
   </section>
 
-
   <!-- EXPERIÊNCIA -->
-  <section id="experience" class="timeline">
+  <section id="experience" class="experience" data-accent="amber">
     <div class="container">
-      <h2>Experiência</h2>
-      <div class="line">
-        <div class="item">
-          <div class="when">2025 — Atual</div>
-          <h3>Projetos Frontend (Autônomo)</h3>
-          <p>Landing pages, UI responsiva, animações leves e integrações simples com APIs.</p>
-        </div>
-        <div class="item">
-          <div class="when">2024 — 2025</div>
-          <h3>ColdGend (Projeto pessoal)</h3>
-          <p>Painel de verificação de sites, login automático e screenshots. Migração para SQL.js local.</p>
-        </div>
-      </div>
+      <h2 class="sec-title">Experiência</h2>
+
+      <ol class="tl">
+        <!-- Item 1 -->
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="tl-card">
+            <header class="tl-head">
+              <div class="when">2025 — Atual</div>
+              <h3>Frontend Developer • Autônomo</h3>
+              <p class="meta"><i class='bx bx-map'></i> Remoto · <i class='bx bx-time-five'></i> Projetos sob demanda
+              </p>
+            </header>
+
+            <p class="tl-text">
+              Criação de landing pages e interfaces responsivas com foco em performance e UX.
+              Integração leve com APIs e otimização on-page (SEO básico).
+            </p>
+
+            <ul class="tl-bullets">
+              <li><i class='bx bx-check'></i> Melhoria de **tempo de carregamento** em até 35% (imagens otimizadas, lazy
+                loading).</li>
+              <li><i class='bx bx-check'></i> Padrões de **acessibilidade** (semântica, contraste e navegação por
+                teclado).</li>
+              <li><i class='bx bx-check'></i> Componentização e CSS organizado para **reuso**.</li>
+            </ul>
+
+            <div class="chipgroup tl-stack">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">UI/UX</span>
+            </div>
+
+            <footer class="tl-actions">
+              <a class="btn-link" href="#" target="_blank" rel="noopener">Ver projetos</a>
+            </footer>
+          </article>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="tl-item">
+          <div class="tl-dot"></div>
+          <article class="tl-card">
+            <header class="tl-head">
+              <div class="when">2024 — 2025</div>
+              <h3>ColdGend • Projeto pessoal</h3>
+              <p class="meta"><i class='bx bx-cog'></i> Verificador de sites · Login automático</p>
+            </header>
+
+            <p class="tl-text">
+              Sistema para testar online/offline, efetuar login automático e registrar prints.
+              Versão local com **SQL.js** e refinamentos de UI/UX.
+            </p>
+
+            <ul class="tl-bullets">
+              <li><i class='bx bx-check'></i> Migração de Firestore para **SQL.js local** mantendo layout e navegação
+                intactos.</li>
+              <li><i class='bx bx-check'></i> Painéis separados: cadastros de sites e acessos **AnyDesk**.</li>
+              <li><i class='bx bx-check'></i> Filtros, exclusão, espaçamentos e interações refinadas.</li>
+            </ul>
+
+            <div class="chipgroup tl-stack">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">SQL.js</span>
+            </div>
+
+            <footer class="tl-actions">
+              <a class="btn-link" href="#" target="_blank" rel="noopener">Repositório</a>
+            </footer>
+          </article>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- PROJETOS -->
-  <section id="projects" class="projects">
+  <section id="projects" class="projects" data-accent="cyan">
     <div class="container">
-      <h2>Meus Projetos</h2>
-      <div class="projects-filter" role="tablist" aria-label="Filtros de projetos">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-        <button class="filter-btn" data-filter="html-css" role="tab" aria-selected="false">HTML/CSS</button>
-        <button class="filter-btn" data-filter="js" role="tab" aria-selected="false">JavaScript</button>
-      </div>
 
-      <div class="projects-grid">
-        <div class="project-card" data-category="html-css">
-          <img src="imagens/projeto1.jpg" alt="Screenshot Projeto 1">
-          <div class="project-info">
-            <h3>Projeto 1</h3>
-            <p>Landing page responsiva com grid e animações leves.</p>
-            <div class="project-links">
-              <a href="#" class="btn">Ver Site</a>
-              <a href="#" class="btn">Código</a>
-            </div>
+      <header class="projects-head">
+        <h2 class="sec-title">Meus Projetos</h2>
+
+        <div class="proj-actions">
+          <label class="proj-search">
+            <input id="projSearch" type="search" placeholder="Buscar por nome, stack..." aria-label="Buscar projetos">
+          </label>
+
+          <label class="proj-sort">
+            <span>Ordenar</span>
+            <select id="projSort" aria-label="Ordenar projetos">
+              <option value="recent">Mais recentes</option>
+              <option value="az">A–Z</option>
+              <option value="za">Z–A</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="proj-filters">
+          <div class="filter-group" data-group="stack" aria-label="Filtrar por stack">
+            <span class="group-label">Stack</span>
+            <button class="chip filter-chip active" data-key="stack" data-value="all">Todos</button>
+            <button class="chip filter-chip" data-key="stack" data-value="html-css">HTML/CSS</button>
+            <button class="chip filter-chip" data-key="stack" data-value="js">JavaScript</button>
+          </div>
+
+          <div class="filter-group" data-group="type" aria-label="Filtrar por tipo">
+            <span class="group-label">Tipo</span>
+            <button class="chip filter-chip active" data-key="type" data-value="all">Todos</button>
+            <button class="chip filter-chip" data-key="type" data-value="landing">Landing</button>
+            <button class="chip filter-chip" data-key="type" data-value="app">App</button>
+            <button class="chip filter-chip" data-key="type" data-value="dashboard">Dashboard</button>
+          </div>
+
+          <div class="filter-group" data-group="status" aria-label="Filtrar por status">
+            <span class="group-label">Status</span>
+            <button class="chip filter-chip active" data-key="status" data-value="all">Todos</button>
+            <button class="chip filter-chip" data-key="status" data-value="live">Live</button>
+            <button class="chip filter-chip" data-key="status" data-value="code">Código</button>
           </div>
         </div>
 
-        <div class="project-card" data-category="js">
-          <img src="imagens/COWEB.png" alt="Screenshot Projeto 2">
+        <div class="proj-counter">
+          <span id="projCount">0</span> projetos encontrados
+        </div>
+      </header>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Card 1 -->
+        <article class="project-card" data-name="ColdGend" data-stack="js" data-type="app" data-status="live"
+          data-date="2025-05-30" data-tags="sql.js, painel, verificador">
+
+          <img src="imagens/COWEB.png" alt="ColdGend - painel de verificação" loading="lazy">
           <div class="project-info">
-            <h3>Projeto 2</h3>
-            <p>App JS puro com consumo de API e DOM dinâmico.</p>
+            <h3>ColdGend</h3>
+            <p>Sistema para testar sites online/offline, login automático e screenshots. Versão local com SQL.js.</p>
+
+            <ul class="badge-list">
+              <li class="badge badge-live">Live</li>
+              <li class="badge">JS</li>
+              <li class="badge">SQL.js</li>
+            </ul>
+
             <div class="project-links">
-              <a href="#" class="btn">Ver Site</a>
-              <a href="#" class="btn">Código</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Ver Site</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Código</a>
+              <button class="btn-ghost btn-quick" type="button">Quick view</button>
             </div>
           </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card" data-name="Landing Tech" data-stack="html-css" data-type="landing"
+          data-status="code" data-date="2025-04-12" data-tags="landing, responsivo, animações">
+
+          <img src="imagens/projeto1.jpg" alt="Landing page tecnológica" loading="lazy">
+          <div class="project-info">
+            <h3>Landing Tech</h3>
+            <p>Landing responsiva com grid, animações leves e foco em conversão.</p>
+
+            <ul class="badge-list">
+              <li class="badge">HTML</li>
+              <li class="badge">CSS</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Preview</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Código</a>
+              <button class="btn-ghost btn-quick" type="button">Quick view</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card" data-name="UI Dashboard" data-stack="js" data-type="dashboard" data-status="code"
+          data-date="2024-12-20" data-tags="dashboard, charts, ui">
+
+          <img src="imagens/projeto2.jpg" alt="Dashboard UI" loading="lazy">
+          <div class="project-info">
+            <h3>UI Dashboard</h3>
+            <p>Protótipo de dashboard com componentes reutilizáveis e charts.</p>
+
+            <ul class="badge-list">
+              <li class="badge">JS</li>
+              <li class="badge">UI</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Preview</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Código</a>
+              <button class="btn-ghost btn-quick" type="button">Quick view</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Modal (um único para todos os cards) -->
+    <div class="proj-modal" id="projModal" aria-hidden="true" role="dialog" aria-label="Detalhes do projeto">
+      <div class="proj-dialog" role="document">
+        <button class="proj-close" type="button" aria-label="Fechar">✕</button>
+        <div class="proj-body">
+          <!-- Conteúdo preenchido via JS -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contact" class="contact">
+  <!-- MODAL DE CONTATO -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactTitle">
+    <div class="contact-dialog" role="document" tabindex="-1">
+      <button class="contact-close" type="button" aria-label="Fechar">✕</button>
+      <div class="contact-content">
+        <h3 id="contactTitle">Fale comigo</h3>
+        <form id="contactForm" novalidate>
+          <div class="input-group">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="name">Seu nome</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Seu email</label>
+          </div>
+          <div class="input-group">
+            <textarea id="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Sua mensagem</label>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--   <section id="contact" class="contact">
     <div class="container">
       <h2>Contato</h2>
       <div class="contact-container">
@@ -291,19 +470,83 @@
         </form>
       </div>
     </div>
-  </section>
+  </section> -->
 
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <a href="#home" class="brand">JW.dev</a>
+        <p class="tagline">Construindo interfaces rápidas e bonitas.</p>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Jhon Wesley. Todos os direitos reservados.</p>
+        <div class="socials">
+          <a class="social" href="https://github.com/seu-usuario" target="_blank" rel="noopener" aria-label="GitHub">
+            <!-- GitHub -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor"
+                d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.2 11.6.6.1.8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.2-.9.1-.9.1-.9 1.3.1 2 .9 2 .9 1.2 2 3 1.4 3.7 1.1.1-.9.5-1.4.8-1.7-2.6-.3-5.3-1.4-5.3-6.2 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.5 1.3a12.3 12.3 0 0 1 6.3 0c2.4-1.6 3.4-1.3 3.4-1.3.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.7 5.9-5.3 6.2.5.4.9 1.2.9 2.4v3.6c0 .3.2.7.8.6A12.2 12.2 0 0 0 24 12.7 12 12 0 0 0 12 .5z" />
+            </svg>
+          </a>
+          <a class="social" href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <!-- LinkedIn -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor"
+                d="M4.98 3.5C4.98 4.9 3.87 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1 4.98 2.1 4.98 3.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.7-1.3 2.5-2.6 5.1-2.6 5.4 0 6.4 3.5 6.4 8v9.4h-5V16c0-2-.1-4.6-2.8-4.6-2.8 0-3.2 2.1-3.2 4.4v8.2H8V8z" />
+            </svg>
+          </a>
+          <a class="social" href="https://x.com/seu-usuario" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <!-- X -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor"
+                d="M18.2 2H21l-6.4 7.3L22 22h-6.9l-5.4-7.1L3.5 22H.7l6.9-7.9L2 2h6.9l4.9 6.6L18.2 2Zm-1.2 18h1.9L7.2 4H5.3l11.7 16Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <h4>Mapa do site</h4>
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#projects">Projetos</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-cta">
+        <h4>Vamos conversar?</h4>
+        <p>Tem uma ideia ou projeto? Me chama e eu te respondo rapidinho.</p>
+        <button class="btn" data-contact-open>Fale comigo</button>
+      </div>
+
+      <div class="footer-meta">
+        <h4>Disponibilidade</h4>
+        <ul class="bullet">
+          <li>Freelance: <strong>aberto</strong></li>
+          <li>Local: Rio de Janeiro, BR</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Jhon Wesley. Feito com ❤️ e café.</p>
+        <div class="mini-links">
+          <a href="#projects">Ver projetos</a>
+          <a href="#about">Sobre</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path fill="currentColor" d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8L6.4 13.4 5 12z" />
+      </svg>
+    </button>
   </footer>
 
-  <!-- JS embutido (pode separar depois em /js) -->
-  <script>
-   
-  </script>
 
 
   <script src="js/script.js"></script>
