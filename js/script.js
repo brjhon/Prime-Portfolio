@@ -229,3 +229,36 @@
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
   topBtn?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 })();
+
+
+// Spotlight segue o mouse nos cards
+(function(){
+  function attachSpotlight(scope){
+    scope.addEventListener('mousemove', (e)=>{
+      const el = e.target.closest('.project-card, .skill-item');
+      if(!el) return;
+      const r = el.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width) * 100;
+      const y = ((e.clientY - r.top) / r.height) * 100;
+      el.style.setProperty('--mx', x + '%');
+      el.style.setProperty('--my', y + '%');
+    });
+  }
+  attachSpotlight(document);
+})();
+
+// Barra de progresso no topo
+(function(){
+  const bar = document.getElementById('readProgress');
+  if(!bar) return;
+  const onScroll = ()=>{
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const height = h.scrollHeight - h.clientHeight;
+    const pct = Math.max(0, Math.min(1, scrolled / (height || 1)));
+    bar.style.width = (pct * 100) + '%';
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
