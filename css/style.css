@@ -23,6 +23,9 @@
   --footer-bg: #000000;
   --footer-text: #aaaaaa;
 
+  --fz-body: 1.05rem; --lh-body: 1.75;
+  --fz-lead: 1.25rem; --fz-h2: clamp(2.2rem, 2.6vw, 3.2rem);
+
   --accent: var(--main-color); /* fallback */
 
   /* ===== VIVID PRO THEME =============================== */
@@ -76,6 +79,7 @@ body.dark {
   --section-bg: #141426;
   --footer-bg: #000000;
   --footer-text: #aaaaaa;
+
 }
 /* -------------------Fim da Área das Cores -------------------------- */
 
@@ -87,7 +91,13 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  font-size: var(--fz-body); 
+  line-height: var(--lh-body); 
+}
 
+.sec-title{ 
+  font-size: var(--fz-h2); 
+  letter-spacing:.2px; 
 }
 
 /* --------------------- Área dos Efeitos----------------- */
@@ -356,6 +366,12 @@ a:hover{ color: var(--brand); }
 }
 .brand-swatches .sw[aria-current="true"]{ outline:2px solid #fff; outline-offset:2px; }
 
+.btn, .btn-ghost, .filter-chip, .chip{ outline: none; }
+.btn:focus-visible, .btn-ghost:focus-visible, .filter-chip:focus-visible, .chip:focus-visible{
+  outline:2px solid var(--brand); outline-offset:2px;
+}
+
+
 /* ------------------------------------------------------------ */
 
 /* -------configuração geral dos Section--------- */
@@ -579,6 +595,7 @@ section {
   color: var(--muted-text);
   font-size: 1.9rem;
   line-height: 1.8;
+  font-size: var(--fz-lead); 
 }
 
 .about .wrap {
